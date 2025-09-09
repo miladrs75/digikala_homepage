@@ -167,7 +167,7 @@ header {
           .side-menu__categories {
             @include m.d-flex(start, stretch, column, 0);
             width: 200px;
-            overflow-y: auto;
+            overflow-y: scroll;
 
             &-item {
               @include m.d-flex(start, center, row, v.$g-1);
@@ -192,7 +192,7 @@ header {
             width: auto;
             padding: v.$p-6;
             background-color: v.$color-bg-primary;
-            overflow-y: auto;
+            overflow-y: scroll;
 
             &-item {
               &--header {
