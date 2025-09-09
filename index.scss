@@ -140,10 +140,11 @@ header {
 
         &-item {
           @include m.d-flex(start, center, row, v.$g-1);
-          cursor: pointer;
+          text-decoration: none;
           border-bottom: 2px solid transparent;
           height: 100%;
           transition: v.$transition-fast;
+          color: v.$color-text-secondary;
 
           &:hover {
             border-bottom-color: #ed1944;
@@ -155,6 +156,10 @@ header {
           }
         }
         // check
+        &--side-menu--inactive {
+          display: none;
+        }
+
         &--side-menu {
           @include m.d-flex(start, stretch, row, 0);
           // display: none;
@@ -194,9 +199,14 @@ header {
             background-color: v.$color-bg-primary;
             overflow-y: scroll;
 
-            &-item {
+            .subcategories-section--inactive {
+              display: none;
+            }
+
+            &-section {
               &--header {
-                @include m.d-flex(start, center, row, v.$g-1 - 4);
+                display: inline-flex;
+                align-items: center;
                 text-decoration: none;
                 font-size: v.$fs-xs;
                 color: #19cde7;
@@ -208,10 +218,12 @@ header {
               }
 
               &--body {
-                @include m.d-flex(start, stretch, row, v.$g-4 * 2);
+                @include m.d-flex(start, stretch, column, v.$g-4 * 2);
+                flex-wrap: wrap;
                 padding-left: 50px;
+                max-height: 1000px;
 
-                &-section {
+                &-item {
                   @include m.d-flex(start, stretch, column, 0);
 
                   .title__link {
@@ -221,7 +233,7 @@ header {
                     color: v.$color-text-secondary;
                     border-right: 2px solid #d52e4e;
                     padding:0 v.$p-3;
-                    margin: 15px 0;
+                    margin-bottom: 15px;
 
                     &:hover {
                       color: #d52e4e;
@@ -370,7 +382,7 @@ header {
   height: 100vh;
   background-color: #ccc;
   opacity: 0.6;
-  z-index: 10;
+  z-index: 910;
 }
 
 // main//////////
