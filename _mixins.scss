@@ -1,0 +1,30 @@
+@use "variables" as v;
+
+@mixin d-flex($j-content, $a-itmes, $f-direction, $gap) {
+  display: flex;
+  justify-content: $j-content;
+  align-items: $a-itmes;
+  flex-direction: $f-direction;
+  gap: $gap;
+}
+
+@mixin fullwidth-section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: v.$color-bg-primary;
+}
+
+@mixin container {
+  width: 95%;
+  max-width: 1300px;
+  height: auto;
+  margin: auto;
+}
+
+@mixin hidden-scrollbar {
+  overflow-y: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
