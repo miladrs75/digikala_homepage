@@ -145,10 +145,11 @@ header .site-nav__desktop--right .site-nav__desktop--category-item {
   align-items: center;
   flex-direction: row;
   gap: 5px;
-  cursor: pointer;
+  text-decoration: none;
   border-bottom: 2px solid transparent;
   height: 100%;
   transition: all 0.3s;
+  color: #000;
 }
 header .site-nav__desktop--right .site-nav__desktop--category-item:hover {
   border-bottom-color: #ed1944;
@@ -156,6 +157,9 @@ header .site-nav__desktop--right .site-nav__desktop--category-item:hover {
 }
 header .site-nav__desktop--right .site-nav__desktop--category-item span {
   font-size: 16px;
+}
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu--inactive {
+  display: none;
 }
 header .site-nav__desktop--right .site-nav__desktop--category--side-menu {
   display: flex;
@@ -203,36 +207,38 @@ header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-m
   background-color: #fff;
   overflow-y: scroll;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--header {
-  display: flex;
-  justify-content: start;
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories .subcategories-section--inactive {
+  display: none;
+}
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--header {
+  display: inline-flex;
   align-items: center;
-  flex-direction: row;
-  gap: 1px;
   text-decoration: none;
   font-size: 12px;
   color: #19cde7;
   padding: 18px 0;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--header span {
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--header span {
   font-size: 14px;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body {
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--body {
   display: flex;
   justify-content: start;
   align-items: stretch;
-  flex-direction: row;
+  flex-direction: column;
   gap: 30px;
+  flex-wrap: wrap;
   padding-left: 50px;
+  max-height: 1000px;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section {
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--body-item {
   display: flex;
   justify-content: start;
   align-items: stretch;
   flex-direction: column;
   gap: 0;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section .title__link {
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--body-item .title__link {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -243,21 +249,21 @@ header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-m
   color: #000;
   border-right: 2px solid #d52e4e;
   padding: 0 10px;
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section .title__link:hover {
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--body-item .title__link:hover {
   color: #d52e4e;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section .title__link span {
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--body-item .title__link span {
   font-size: 14px;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section .subtitle__link {
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--body-item .subtitle__link {
   text-decoration: none;
   font-size: 12px;
   color: #535760;
   margin: 10px 0;
 }
-header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section .subtitle__link:hover {
+header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-section--body-item .subtitle__link:hover {
   color: #d52e4e;
 }
 header .site-nav__desktop--right .site-nav__desktop--divider {
@@ -387,7 +393,7 @@ header .site-nav__mobile--location-selector span {
   height: 100vh;
   background-color: #ccc;
   opacity: 0.6;
-  z-index: 10;
+  z-index: 910;
 }
 
 main {
