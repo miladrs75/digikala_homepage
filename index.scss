@@ -192,6 +192,7 @@ header {
             width: auto;
             padding: v.$p-6;
             background-color: v.$color-bg-primary;
+            overflow-y: auto;
 
             &-item {
               &--header {
@@ -207,7 +208,8 @@ header {
               }
 
               &--body {
-                @include m.d-flex(start, stretch, row, 0);
+                @include m.d-flex(start, stretch, row, v.$g-4 * 2);
+                padding-left: 50px;
 
                 &-section {
                   @include m.d-flex(start, stretch, column, 0);
@@ -219,7 +221,7 @@ header {
                     color: v.$color-text-secondary;
                     border-right: 2px solid #d52e4e;
                     padding:0 v.$p-3;
-                    margin: 10px 0;
+                    margin: 15px 0;
 
                     &:hover {
                       color: #d52e4e;
@@ -234,7 +236,7 @@ header {
                     text-decoration: none;
                     font-size: v.$fs-xs;
                     color: v.$color-text-primary;
-                    margin: 5px 0;
+                    margin: 10px 0;
 
                     &:hover {
                       color: #d52e4e;
