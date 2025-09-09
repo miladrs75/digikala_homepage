@@ -176,7 +176,7 @@ header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-m
   flex-direction: column;
   gap: 0;
   width: 200px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__categories-item {
   display: flex;
@@ -201,6 +201,7 @@ header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-m
   width: auto;
   padding: 18px;
   background-color: #fff;
+  overflow-y: scroll;
 }
 header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--header {
   display: flex;
@@ -221,7 +222,8 @@ header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-m
   justify-content: start;
   align-items: stretch;
   flex-direction: row;
-  gap: 0;
+  gap: 30px;
+  padding-left: 50px;
 }
 header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section {
   display: flex;
@@ -241,7 +243,7 @@ header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-m
   color: #000;
   border-right: 2px solid #d52e4e;
   padding: 0 10px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section .title__link:hover {
   color: #d52e4e;
@@ -253,7 +255,7 @@ header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-m
   text-decoration: none;
   font-size: 12px;
   color: #535760;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 header .site-nav__desktop--right .site-nav__desktop--category--side-menu .side-menu__subcategories-item--body-section .subtitle__link:hover {
   color: #d52e4e;
