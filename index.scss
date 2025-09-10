@@ -232,7 +232,7 @@ header {
                     font-size: v.$fs-sm;
                     color: v.$color-text-secondary;
                     border-right: 2px solid #d52e4e;
-                    padding:0 v.$p-3;
+                    padding: 0 v.$p-3;
                     margin-bottom: 15px;
 
                     &:hover {
@@ -397,6 +397,7 @@ main {
   .main__stories {
     @include m.fullwidth-section;
     font-size: v.$fs-xs;
+    margin-top: 50px;
 
     &--list {
       @include m.d-flex(space-between, start, row, v.$g-4 + 5);
@@ -455,7 +456,12 @@ main {
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
 
+      .main__carousel-slides--item-active {
+        display: block;
+      }
+
       &--item {
+        display: none;
         flex: 0 0 100%;
         scroll-snap-align: start;
 
@@ -470,6 +476,30 @@ main {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+    }
+
+    &-btns {
+      display: none;
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      z-index: 1000;
+      opacity: 0;
+      transition: all 0.3s;
+
+      button {
+        @include m.d-flex(center, center, row, 0);
+        border: 1px solid v.$color-border-primary;
+        background-color: v.$color-bg-primary;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        span {
+          font-size: v.$fs-xxs * 2;
         }
       }
     }
@@ -493,6 +523,11 @@ main {
           background-color: #fff;
           transition: v.$transition-fast;
         }
+      }
+
+      .active {
+        background-color: #fff;
+        width: 15px;
       }
     }
   }
@@ -2235,6 +2270,12 @@ footer {
     color: #fff;
     border-radius: 50%;
     z-index: 800;
+  }
+
+  main .main__carousel {
+    &-btns {
+      @include m.d-flex(center, center, row, v.$g-1);
+    }
   }
 
   // footer//////////
