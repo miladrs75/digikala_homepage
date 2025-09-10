@@ -285,7 +285,7 @@ menuData.forEach((item) => {
 const categoryItems = document.querySelectorAll(".side-menu__categories-item");
 const subcategorySections = document.querySelectorAll(".side-menu__subcategories-section");
 
-sideMenuLink.addEventListener("mouseenter", () => {
+sideMenuLink.addEventListener("mousemove", () => {
   sideMenu.classList.add("site-nav__desktop--category--side-menu");
   subcategoryContainer.firstElementChild.classList.remove("subcategories-section--inactive")
   backDrop.style.display = "block";
