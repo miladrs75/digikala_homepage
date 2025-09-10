@@ -81,8 +81,7 @@
               دسته بندی کالا ها
             </a>
             <div class="site-nav__desktop--category--side-menu--inactive">
-              <div class="side-menu__categories">
-              </div>
+              <div class="side-menu__categories"></div>
               <div class="side-menu__subcategories"></div>
             </div>
           </div>
@@ -333,7 +332,10 @@
               />
             </a>
           </div>
-          <div class="main__carousel-slides--item" id="slide2">
+          <div
+            class="main__carousel-slides--item main__carousel-slides--item-active"
+            id="slide2"
+          >
             <a href="#">
               <img
                 src="./assets/photos/39db3b26f118b9f49452eaf800fb435d09df32b5_1754750564.gif"
@@ -415,17 +417,25 @@
             </a>
           </div>
         </div>
+        <div class="main__carousel-btns">
+          <button class="main__carousel-btn-next">
+            <span class="material-symbols-outlined"> arrow_forward </span>
+          </button>
+          <button class="main__carousel-btn-prev">
+            <span class="material-symbols-outlined"> arrow_back </span>
+          </button>
+        </div>
         <div class="main__carousel-indicators">
-          <a href="#slide1" class="main__carousel-indicator"></a>
-          <a href="#slide2" class="main__carousel-indicator"></a>
-          <a href="#slide3" class="main__carousel-indicator"></a>
-          <a href="#slide4" class="main__carousel-indicator"></a>
-          <a href="#slide5" class="main__carousel-indicator"></a>
-          <a href="#slide6" class="main__carousel-indicator"></a>
-          <a href="#slide7" class="main__carousel-indicator"></a>
-          <a href="#slide8" class="main__carousel-indicator"></a>
-          <a href="#slide9" class="main__carousel-indicator"></a>
           <a href="#slide10" class="main__carousel-indicator"></a>
+          <a href="#slide9" class="main__carousel-indicator active"></a>
+          <a href="#slide8" class="main__carousel-indicator"></a>
+          <a href="#slide7" class="main__carousel-indicator"></a>
+          <a href="#slide6" class="main__carousel-indicator"></a>
+          <a href="#slide5" class="main__carousel-indicator"></a>
+          <a href="#slide4" class="main__carousel-indicator"></a>
+          <a href="#slide3" class="main__carousel-indicator"></a>
+          <a href="#slide2" class="main__carousel-indicator"></a>
+          <a href="#slide1" class="main__carousel-indicator"></a>
         </div>
       </section>
       <section class="main__categories-shortcut">
@@ -5826,6 +5836,7 @@
         </section>
       </div>
     </footer>
+    <script src="./js/carousel.js"></script>
     <script src="./js/categoryMenu.js"></script>
   </body>
 </html>
