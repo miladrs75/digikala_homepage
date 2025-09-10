@@ -414,6 +414,7 @@ main .main__stories {
   overflow: hidden;
   background-color: #fff;
   font-size: 12px;
+  margin-top: 50px;
 }
 main .main__stories--list {
   display: flex;
@@ -481,7 +482,11 @@ main .main__carousel-slides {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
+main .main__carousel-slides .main__carousel-slides--item-active {
+  display: block;
+}
 main .main__carousel-slides--item {
+  display: none;
   flex: 0 0 100%;
   scroll-snap-align: start;
 }
@@ -496,6 +501,31 @@ main .main__carousel-slides--item img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .main__carousel-btns {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.3s;
+}
+main .main__carousel-btns button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main .main__carousel-btns button span {
+  font-size: 20px;
 }
 main .main__carousel-indicators {
   display: flex;
@@ -519,6 +549,10 @@ main .main__carousel-indicators .main__carousel-indicator {
 main .main__carousel-indicators .main__carousel-indicator:hover {
   background-color: #fff;
   transition: all 0.3s;
+}
+main .main__carousel-indicators .active {
+  background-color: #fff;
+  width: 15px;
 }
 @media (min-width: 580px) {
   main .main__carousel {
@@ -2547,6 +2581,13 @@ footer .site-footer__desktop .digi-brands .brands:first-child {
     color: #fff;
     border-radius: 50%;
     z-index: 800;
+  }
+  main .main__carousel-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
   }
   footer {
     border-top: 1px solid #dcdcdc;
