@@ -12,7 +12,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: v.$color-bg-primary;
+  background-color: var(--color-bg-primary);
 }
 
 @mixin container {
