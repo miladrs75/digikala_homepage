@@ -48,6 +48,24 @@ function handlePrevSlide() {
   );
 }
 
+let nextSlideInterval;
+
+function handleNextSlideInterval() {
+  nextSlideInterval = setInterval(() => {
+    handleNextSlide();
+  }, 3000);
+}
+
+handleNextSlideInterval();
+
+carouselSlides.addEventListener("mouseenter", () => {
+  clearInterval(nextSlideInterval);
+});
+
+carouselSlides.addEventListener("mouseleave", () => {
+  handleNextSlideInterval();
+});
+
 carousel.addEventListener("mouseenter", () => {
   carouselBtnBox.style.opacity = 1;
 });
@@ -69,6 +87,7 @@ let touchEnd = 0;
 
 carouselSlides.addEventListener("touchstart", (e) => {
   touchStart = e.touches[0].clientX;
+  clearInterval(nextSlideInterval);
 });
 
 carouselSlides.addEventListener("touchend", (e) => {
@@ -79,6 +98,7 @@ carouselSlides.addEventListener("touchend", (e) => {
     indicator.classList.remove("active");
     indicator.style.backgroundColor = "v.$color-text-primary";
   });
+  handleNextSlideInterval();
 });
 
 carouselIndiacators.forEach((indicator) => {
