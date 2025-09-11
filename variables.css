@@ -1,0 +1,25 @@
+:root {
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #d52e4e;
+  --color-bg-market: #7bbc33;
+  --color-bg-btn: #f0f0f1;
+  --color-bg-inp: #f0f0f1;
+  --color-bg-card: #fff;
+  --color-category-item: #f5f5f5;
+  --color-text-primary: #535760;
+  --color-text-secondary: #000;
+  --color-border-primary: #dcdcdc;
+}
+
+[data-theme="dark"] {
+  --color-bg-primary: #1e1e1e;
+  --color-bg-secondary: #2c2c2c;
+  --color-bg-market: #2c2c2c;
+  --color-bg-btn: #2c2c2c;
+  --color-bg-inp: #2c2c2c;
+  --color-bg-card: #2c2c2c;
+  --color-bg-category-item: #2c2c2c;
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #cccccc;
+  --color-border-primary: #444444;
+}
