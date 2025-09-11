@@ -14,6 +14,7 @@
 html,
 body {
   height: 100vh;
+  background-color: var(--color-bg-primary);
 }
 
 * {
@@ -24,35 +25,21 @@ body {
     Arial, sans-serif;
 }
 
-.top-banner {
-  width: 100%;
-  background-color: v.$color-bg-primary;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    min-height: 35px;
-    max-height: 60px;
-    object-fit: cover;
-  }
-}
-
 // header//////////
 header {
-  border-bottom: 1px solid v.$color-border-primary;
+  border-bottom: 1px solid var(--color-border-primary);
   position: fixed;
   width: 100%;
   top: 0;
   right: 0;
-  background-color: v.$color-bg-primary;
+  background-color: var(--color-bg-primary);
   z-index: 1000;
 
   .site-header {
     @include m.d-flex(start, center, row, 0);
     font-size: v.$fs-xs;
     position: static;
-    background-color: v.$color-bg-primary;
+    background-color: var(--color-bg-primary);
     padding: v.$p-6 v.$p-5 0;
 
     &__mobile {
@@ -106,13 +93,13 @@ header {
       flex-grow: 1;
       background: url("/assets/photos/search_24dp_75797D_FILL0_wght400_GRAD0_opsz24.png")
         no-repeat right 8px center;
-      background-color: #f0f0f1;
+      background-color: var(--color-bg-inp);
     }
 
     &__btn {
       text-decoration: none;
-      background-color: #f0f0f1;
-      color: v.$color-text-primary;
+      background-color: var(--color-bg-btn);
+      color: var(--color-text-primary);
       border: none;
       border-radius: v.$radius-md;
       padding: v.$p-1;
@@ -129,7 +116,7 @@ header {
     font-size: v.$fs-sm;
     margin: auto;
     padding: 0 v.$p-5;
-    background-color: v.$color-bg-primary;
+    background-color: var(--color-bg-primary);
 
     &--right {
       @include m.d-flex(start, center, row, v.$g-2);
@@ -144,7 +131,7 @@ header {
           border-bottom: 2px solid transparent;
           height: 100%;
           transition: v.$transition-fast;
-          color: v.$color-text-secondary;
+          color: var(--color-text-secondary);
 
           &:hover {
             border-bottom-color: #ed1944;
@@ -171,19 +158,20 @@ header {
 
           .side-menu__categories {
             @include m.d-flex(start, stretch, column, 0);
+            background-color: var(--color-bg-category-item);
             width: 200px;
             overflow-y: scroll;
 
             &-item {
               @include m.d-flex(start, center, row, v.$g-1);
               text-decoration: none;
-              background-color: #f5f5f5;
-              color: v.$color-text-primary;
+              background-color: var(--color-bg-category-item);
+              color: var(--color-text-primary);
               padding: v.$p-6 v.$p-2;
               font-size: v.$fs-xs;
 
               &:hover {
-                background-color: v.$color-bg-primary;
+                background-color: var(--color-bg-primary);
                 color: #d52e4e;
               }
 
@@ -196,7 +184,7 @@ header {
           .side-menu__subcategories {
             width: auto;
             padding: v.$p-6;
-            background-color: v.$color-bg-primary;
+            background-color: var(--color-bg-primary);
             overflow-y: scroll;
 
             .subcategories-section--inactive {
@@ -230,7 +218,7 @@ header {
                     @include m.d-flex(start, center, row, v.$g-1 - 3);
                     text-decoration: none;
                     font-size: v.$fs-sm;
-                    color: v.$color-text-secondary;
+                    color: var(--color-text-secondary);
                     border-right: 2px solid #d52e4e;
                     padding: 0 v.$p-3;
                     margin-bottom: 15px;
@@ -247,7 +235,7 @@ header {
                   .subtitle__link {
                     text-decoration: none;
                     font-size: v.$fs-xs;
-                    color: v.$color-text-primary;
+                    color: var(--color-text-primary);
                     margin: 10px 0;
 
                     &:hover {
@@ -270,7 +258,7 @@ header {
       ul {
         @include m.d-flex(start, stretch, row, v.$g-2);
         font-size: v.$fs-xs;
-        color: v.$color-text-secondary;
+        color: var(--color-text-secondary);
         list-style: none;
         height: 100%;
 
@@ -300,7 +288,7 @@ header {
 
       .site-nav__desktop--location-selector {
         @include m.d-flex(start, center, row, v.$g-1);
-        color: v.$color-text-secondary;
+        color: var(--color-text-secondary);
         cursor: pointer;
 
         span {
@@ -329,7 +317,7 @@ header {
   .site-nav__mobile--location-selector {
     @include m.d-flex(start, center, row, v.$g-1);
     font-size: v.$fs-xs;
-    color: v.$color-text-secondary;
+    color: var(--color-text-secondary);
     padding: 0 v.$p-5;
     height: 45px;
 
@@ -349,7 +337,7 @@ header {
   width: 100%;
   height: 60px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
-  border-top: 1px solid v.$color-border-primary;
+  border-top: 1px solid var(--color-border-primary);
 
   .site-nav__mobile-list {
     display: flex;
@@ -361,8 +349,8 @@ header {
       @include m.d-flex(center, center, column, v.$g-1 - 2);
       font-size: v.$fs-xxs;
       width: 20%;
-      background-color: v.$color-bg-primary;
-      color: v.$color-text-primary;
+      background-color: var(--color-bg-primary);
+      color: var(--color-text-primary);
       cursor: pointer;
 
       &:hover {
@@ -390,14 +378,14 @@ main {
   @include m.d-flex(start, stretch, column, 20px);
   width: 100%;
   max-width: 100vw;
-  background-color: v.$color-bg-primary;
+  background-color: var(--color-bg-primary);
   margin-top: 25px;
   position: relative;
 
   .main__stories {
     @include m.fullwidth-section;
     font-size: v.$fs-xs;
-    margin-top: 50px;
+    margin-top: 100px;
 
     &--list {
       @include m.d-flex(space-between, start, row, v.$g-4 + 5);
@@ -432,7 +420,7 @@ main {
 
           span {
             text-align: center;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
           }
         }
       }
@@ -444,7 +432,7 @@ main {
     width: 100%;
     height: 200px;
     overflow: hidden;
-    background-color: v.$color-bg-primary;
+    background-color: var(--color-bg-primary);
 
     &-slides {
       width: 100%;
@@ -485,14 +473,14 @@ main {
       position: absolute;
       bottom: 5%;
       right: 5%;
-      z-index: 1000;
+      z-index: 990;
       opacity: 0;
       transition: all 0.3s;
 
       button {
         @include m.d-flex(center, center, row, 0);
-        border: 1px solid v.$color-border-primary;
-        background-color: v.$color-bg-primary;
+        border: 1px solid var(--color-border-primary);
+        background-color: #fff;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -517,7 +505,7 @@ main {
         height: 8px;
         background-color: red;
         border-radius: 50%;
-        background-color: v.$color-text-primary;
+        background-color: var(--color-text-primary);
 
         &:hover {
           background-color: #fff;
@@ -554,7 +542,7 @@ main {
 
       @include m.d-flex(space-around, start, row, 25px);
       @include m.hidden-scrollbar;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
       width: 100%;
       list-style: none;
       max-width: 1300px;
@@ -580,7 +568,7 @@ main {
         a {
           @include m.d-flex(center, center, column, v.$g-3);
           text-decoration: none;
-          color: v.$color-text-primary;
+          color: var(--color-text-primary);
           text-align: center;
         }
       }
@@ -592,7 +580,7 @@ main {
 
     &--container {
       @include m.d-flex(start, stretch, column, 0);
-      background-color: v.$color-bg-secondary;
+      background-color: var(--color-bg-secondary);
       height: auto;
       width: 100%;
       max-width: 1300px;
@@ -650,9 +638,9 @@ main {
           .main__amazing-offers--list-card {
             @include m.d-flex(start, stretch, column, v.$g-2);
             width: 100%;
-            background-color: #fff;
+            background-color: var(--color-bg-primary);
             padding: v.$p-2;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
             font-size: v.$fs-xs;
             line-height: 23px;
 
@@ -677,7 +665,7 @@ main {
                 width: 35px;
                 height: 20px;
                 padding: 5px 4px;
-                background-color: v.$color-bg-secondary;
+                background-color: var(--color-bg-secondary);
                 color: #fff;
                 border-radius: 9999px;
               }
@@ -705,7 +693,7 @@ main {
     &--container {
       @include m.d-flex(center, center, column, v.$g-2);
       @include m.container;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
       overflow: hidden;
 
       &-item {
@@ -734,7 +722,7 @@ main {
 
     .main__amazing-offers {
       &--container {
-        background-color: #7bbc33;
+        background-color: var(--color-bg-market);
         width: 100%;
         height: auto;
       }
@@ -747,7 +735,7 @@ main {
 
       &-container {
         @include m.container;
-        background-color: v.$color-bg-primary;
+        background-color: var(--color-bg-primary);
 
         .main__amazing-offers--desktop-link {
           text-decoration: none;
@@ -786,7 +774,7 @@ main {
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                background-color: v.$color-bg-secondary;
+                background-color: var(--color-bg-secondary);
                 color: #fff;
                 font-size: v.$fs-sm;
                 padding: 0 v.$p-1;
@@ -819,12 +807,13 @@ main {
     &--container {
       @include m.container;
       @include m.hidden-scrollbar;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
 
       &-header {
         @include m.d-flex(start, center, row, 0);
         width: 100%;
         height: 25px;
+        color: var(--color-text-secondary);
 
         & > h2:nth-child(1) {
           font-size: v.$fs-sm;
@@ -842,7 +831,7 @@ main {
           a {
             @include m.d-flex(center, center, column, v.$g-1);
             text-decoration: none;
-            color: v.$color-text-secondary;
+            color: var(--color-text-secondary);
             font-size: v.$fs-xxs;
             width: 75px;
             height: 120px;
@@ -867,7 +856,7 @@ main {
 
     &--container {
       @include m.container;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
 
       .main__products-introduction--mobile {
         display: block;
@@ -915,7 +904,7 @@ main {
 
     &--container {
       @include m.container;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
 
       .main__popular-brands--header {
         @include m.d-flex(start, center, row, v.$g-1);
@@ -926,6 +915,7 @@ main {
 
         h2 {
           font-size: v.$fs-sm;
+          color: var(--color-text-secondary);
         }
       }
 
@@ -941,8 +931,8 @@ main {
           height: 125px;
           flex: 0 0 90px;
           text-decoration: none;
-          color: v.$color-text-secondary;
-          border: 1px solid v.$color-border-primary;
+          color: var(--color-text-secondary);
+          border: 1px solid var(--color-border-primary);
           border-radius: v.$radius-md;
           font-size: v.$fs-xxs + 2;
           padding: v.$p-2;
@@ -981,13 +971,13 @@ main {
     .main__suggested-offers--mobile-container {
       @include m.d-flex(start, stretch, column, v.$g-4 * 2);
       @include m.container;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
 
       hr {
         width: 1000%;
         height: 8px;
         border: none;
-        background-color: v.$color-border-primary;
+        background-color: var(--color-border-primary);
         transform: translateX(1000px);
       }
 
@@ -1004,20 +994,21 @@ main {
 
           h2 {
             font-size: v.$fs-sm;
+            color: var(--color-text-secondary);
           }
 
           p {
             font-size: v.$fs-xs;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
             margin-top: 5px;
           }
 
           a {
             @include m.d-flex(start, center, row, 0);
             text-decoration: none;
-            color: v.$color-text-secondary;
+            color: var(--color-text-secondary);
             font-size: v.$fs-xs;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
 
             span {
               font-size: v.$fs-md;
@@ -1038,8 +1029,8 @@ main {
             height: auto;
             flex: 0 1 140px;
             text-decoration: none;
-            color: v.$color-text-secondary;
-            border: 1px solid v.$color-border-primary;
+            color: var(--color-text-secondary);
+            border: 1px solid var(--color-border-primary);
             border-radius: v.$radius-md;
             font-size: v.$fs-xs;
             padding: v.$p-2;
@@ -1066,7 +1057,7 @@ main {
 
               .main__suggested-offers--mobile-item--price {
                 @include m.d-flex(center, center, row, v.$g-1 - 3);
-                color: v.$color-text-primary;
+                color: var(--color-text-primary);
                 text-align: center;
                 width: 100%;
                 white-space: nowrap;
@@ -1096,16 +1087,16 @@ main {
     .main__suggested-offers--desktop-container {
       @include m.d-flex(start, center, row, v.$g-4 + 5);
       @include m.container;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
       flex-wrap: nowrap;
-      border: 1px solid v.$color-border-primary;
+      border: 1px solid var(--color-border-primary);
       border-radius: v.$radius-md;
       padding: 0 v.$p-6;
 
       .main__suggested-offers--desktop-item {
         @include m.d-flex(start, stretch, column, v.$g-4 + 5);
         flex: 1;
-        border-left: 1px solid v.$color-border-primary;
+        border-left: 1px solid var(--color-border-primary);
 
         .main__suggested-offers--desktop-header {
           @include m.d-flex(space-between, start, column, v.$g-1);
@@ -1116,11 +1107,12 @@ main {
 
           h2 {
             font-size: v.$fs-sm;
+            color: var(--color-text-secondary);
           }
 
           p {
             font-size: v.$fs-xs;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
             margin-top: 5px;
           }
         }
@@ -1148,16 +1140,16 @@ main {
           }
 
           .main__suggested-offers--desktop-body-top {
-            border-bottom: 1px solid v.$color-border-primary;
+            border-bottom: 1px solid var(--color-border-primary);
 
             & > a:first-child {
-              border-left: 1px solid v.$color-border-primary;
+              border-left: 1px solid var(--color-border-primary);
             }
           }
 
           .main__suggested-offers--desktop-body-bottom {
             & > a:first-child {
-              border-left: 1px solid v.$color-border-primary;
+              border-left: 1px solid var(--color-border-primary);
             }
           }
         }
@@ -1190,8 +1182,8 @@ main {
 
     &--container {
       @include m.container;
-      background-color: v.$color-bg-primary;
-      border: 1px solid v.$color-border-primary;
+      background-color: var(--color-bg-primary);
+      border: 1px solid var(--color-border-primary);
       border-radius: v.$radius-md;
       padding: v.$p-3;
 
@@ -1206,8 +1198,8 @@ main {
           text-decoration: none;
           width: 85px;
           height: auto;
-          background-color: #f0f0f1;
-          color: v.$color-text-primary;
+          background-color: var(--color-bg-btn);
+          color: var(--color-text-primary);
           border-radius: 9999px;
           font-size: v.$fs-xs;
 
@@ -1229,7 +1221,7 @@ main {
         & > span {
           @include m.d-flex(start, center, row, v.$g-1);
           font-size: v.$fs-xxs;
-          color: v.$color-text-primary;
+          color: var(--color-text-primary);
 
           span {
             color: #ff62c2;
@@ -1247,8 +1239,8 @@ main {
           flex: 1 1 200px;
           min-width: 200px;
           text-decoration: none;
-          color: v.$color-text-primary;
-          border: 1px solid v.$color-border-primary;
+          color: var(--color-text-primary);
+          border: 1px solid var(--color-border-primary);
           border-radius: v.$radius-sm;
           padding: v.$p-1;
 
@@ -1302,8 +1294,8 @@ main {
 
     &-container {
       @include m.container;
-      background-color: v.$color-bg-primary;
-      border: 1px solid v.$color-border-primary;
+      background-color: var(--color-bg-primary);
+      border: 1px solid var(--color-border-primary);
       border-radius: v.$radius-md;
       overflow: hidden;
 
@@ -1317,6 +1309,7 @@ main {
           margin: 0 auto;
           font-size: v.$fs-md + 5;
           font-weight: lighter;
+          color: var(--color-text-secondary);
 
           span {
             color: #f9a825;
@@ -1350,7 +1343,7 @@ main {
               position: relative;
 
               .main__most-sales--item-info::before {
-                background-color: v.$color-border-primary;
+                background-color: var(--color-border-primary);
                 bottom: -10px;
                 content: "";
                 display: block;
@@ -1385,7 +1378,7 @@ main {
 
                 .main__most-sales--item-info {
                   font-size: v.$fs-xs;
-                  color: v.$color-text-primary;
+                  color: var(--color-text-primary);
                   display: -webkit-box;
                   -webkit-box-orient: vertical;
                   -webkit-line-clamp: 2;
@@ -1407,7 +1400,7 @@ main {
 
     &-container {
       @include m.container;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
 
       .main__most-sales--mobile-header {
         @include m.d-flex(start, center, row, v.$g-1);
@@ -1434,9 +1427,9 @@ main {
 
           .main__most-sales--mobile-item {
             text-decoration: none;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
             font-size: v.$fs-xs;
-            border: 1px solid v.$color-border-primary;
+            border: 1px solid var(--color-border-primary);
             border-radius: v.$radius-md;
             padding: v.$p-1;
 
@@ -1471,7 +1464,7 @@ main {
 
     &--container {
       @include m.container;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
       border-radius: v.$radius-md;
 
       a {
@@ -1493,8 +1486,8 @@ main {
 
     &--container {
       @include m.container;
-      background-color: v.$color-bg-primary;
-      border: 1px solid v.$color-border-primary;
+      background-color: var(--color-bg-primary);
+      border: 1px solid var(--color-border-primary);
       border-radius: v.$radius-md;
       overflow: hidden;
 
@@ -1509,6 +1502,7 @@ main {
         h2 {
           font-size: v.$fs-md + 5;
           font-weight: lighter;
+          color: var(--color-text-secondary);
         }
       }
 
@@ -1519,6 +1513,7 @@ main {
 
         .main__special-offers--item {
           @include m.d-flex(space-between, center, column, v.$g-2);
+          background-color: var(--color-bg-card);
           flex: 1;
           text-decoration: none;
           width: auto;
@@ -1531,13 +1526,13 @@ main {
           div {
             @include m.d-flex(space-between, center, row, 0);
             width: 100%;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
 
             .percent {
               @include m.d-flex(center, center, row, 0);
               font-weight: bold;
               padding: v.$p-1;
-              background-color: v.$color-bg-secondary;
+              background-color: var(--color-bg-secondary);
               color: #fff;
               border-radius: 9999px;
               font-size: v.$fs-xs;
@@ -1567,7 +1562,7 @@ main {
 
     &--container {
       @include m.container;
-      background-color: v.$color-bg-primary;
+      background-color: var(--color-bg-primary);
 
       &-header {
         @include m.d-flex(space-between, center, row, 0);
@@ -1577,6 +1572,7 @@ main {
         h2 {
           font-weight: lighter;
           font-size: v.$fs-md;
+          color: var(--color-text-secondary)
         }
 
         a {
@@ -1605,7 +1601,7 @@ main {
           max-width: 350px;
           display: block;
           border-radius: v.$radius-sm;
-          border: 1px solid v.$color-border-primary;
+          border: 1px solid var(--color-border-primary);
 
           article {
             img {
@@ -1617,7 +1613,7 @@ main {
             p {
               padding: v.$p-3;
               font-size: v.$fs-xs;
-              color: v.$color-text-primary;
+              color: var(--color-text-primary);
             }
           }
         }
@@ -1656,7 +1652,7 @@ main {
 footer {
   @include m.fullwidth-section;
   max-width: 100vw;
-  border-top: 8px solid v.$color-border-primary;
+  border-top: 8px solid var(--color-border-primary);
   margin: 20px 0 0;
 
   .site-footer__mobile {
@@ -1672,8 +1668,8 @@ footer {
         @include m.d-flex(center, center, row, v.$g-1 - 3);
         font-size: v.$fs-xs;
         text-decoration: none;
-        color: v.$color-text-primary;
-        background-color: #f2f2f2;
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-btn);
         padding: v.$p-2 v.$p-5;
         border-radius: 9999px;
 
@@ -1698,10 +1694,10 @@ footer {
           span {
             @include m.d-flex(center, center, row, 0);
             border-radius: 50%;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
             width: 36px;
             height: 36px;
-            background-color: #f2f2f2;
+            background-color: var(--color-bg-btn);
           }
 
           img {
@@ -1712,12 +1708,12 @@ footer {
             font-size: v.$fs-xs;
 
             & > p:first-child {
-              color: v.$color-text-secondary;
+              color: var(--color-text-secondary);
               padding-bottom: v.$p-1;
             }
 
             & > p:last-child {
-              color: v.$color-text-primary;
+              color: var(--color-text-primary);
             }
           }
         }
@@ -1726,8 +1722,8 @@ footer {
           @include m.d-flex(center, center, row, v.$g-1 - 3);
           font-size: v.$fs-xs;
           text-decoration: none;
-          color: v.$color-text-primary;
-          background-color: #f2f2f2;
+          color: var(--color-text-primary);
+          background-color: var(--color-bg-btn);
           padding: v.$p-2 v.$p-5;
           border-radius: 9999px;
         }
@@ -1741,6 +1737,7 @@ footer {
         width: 100%;
         padding: v.$p-4;
         border-bottom: 1px solid #f2f2f2;
+        color: var(--color-text-secondary);
 
         .acc-checkbox {
           display: none;
@@ -1768,7 +1765,7 @@ footer {
 
               a {
                 text-decoration: none;
-                color: v.$color-text-primary;
+                color: var(--color-text-secondary);
               }
             }
           }
@@ -1816,17 +1813,17 @@ footer {
           @include m.d-flex(center, center, row, v.$g-1 - 3);
           font-size: v.$fs-xs;
           text-decoration: none;
-          color: v.$color-text-primary;
-          background-color: v.$color-bg-primary;
+          color: var(--color-text-primary);
+          background-color: var(--color-bg-primary);
           padding: v.$p-2 v.$p-5;
-          border: 1px solid v.$color-border-primary;
+          border: 1px solid var(--color-border-primary);
           border-radius: v.$radius-sm;
         }
       }
 
       .site-footer__desktop--support {
         font-size: v.$fs-xs;
-        color: v.$color-text-primary;
+        color: var(--color-text-primary);
         padding-top: v.$p-2;
 
         .option-logos {
@@ -1836,7 +1833,7 @@ footer {
           a {
             @include m.d-flex(start, center, column, v.$g-2);
             text-decoration: none;
-            color: v.$color-text-primary;
+            color: var(--color-text-primary);
           }
         }
       }
@@ -1852,6 +1849,7 @@ footer {
             font-size: v.$fs-md;
             font-weight: bold;
             padding-bottom: v.$p-5;
+            color: var(--color-text-secondary);
           }
 
           ul {
@@ -1888,6 +1886,7 @@ footer {
             label {
               font-size: v.$fs-xs;
               font-weight: bold;
+              color: var(--color-text-secondary);
             }
 
             div {
@@ -1900,6 +1899,7 @@ footer {
                 padding: v.$p-4 v.$p-5;
                 background-color: #f0f0f1;
                 border-radius: v.$radius-md;
+                background-color: var(--color-bg-inp);
               }
 
               input:invalid {
@@ -1969,7 +1969,7 @@ footer {
               width: 100%;
               height: 100%;
               background-color: #fff;
-              color: v.$color-text-primary;
+              color: #535760;
               border-radius: v.$radius-sm;
             }
           }
@@ -1978,12 +1978,12 @@ footer {
 
       .etminan-namad {
         @include m.d-flex(space-between, center, row, 0);
-        border-top: 1px solid v.$color-border-primary;
-        border-bottom: 1px solid v.$color-border-primary;
+        border-top: 1px solid var(--color-border-primary);
+        border-bottom: 1px solid var(--color-border-primary);
         padding: v.$p-6 + 10 0;
 
         h1 {
-          color: v.$color-text-primary;
+          color: var(--color-text-primary);
           font-weight: lighter;
         }
 
@@ -1995,7 +1995,7 @@ footer {
             text-decoration: none;
             width: 110px;
             height: 110px;
-            border: 1px solid v.$color-border-primary;
+            border: 1px solid var(--color-border-primary);
             border-radius: v.$radius-md;
 
             img {
@@ -2009,7 +2009,7 @@ footer {
 
       .copyright {
         font-size: v.$fs-xs;
-        color: v.$color-text-primary;
+        color: var(--color-text-primary);
         padding: v.$p-6 * 2;
         text-align: center;
       }
@@ -2033,12 +2033,12 @@ footer {
         }
 
         a:not(:last-child) {
-          border-left: 1px solid v.$color-border-primary;
+          border-left: 1px solid var(--color-border-primary);
         }
       }
 
       .brands:first-child {
-        border-bottom: 1px solid v.$color-border-primary;
+        border-bottom: 1px solid var(--color-border-primary);
       }
     }
   }
@@ -2057,12 +2057,12 @@ footer {
       }
 
       &__btn {
-        background-color: v.$color-bg-primary;
+        background-color: var(--color-bg-primary);
       }
 
       &__btn--login {
         @include m.d-flex(start, center, row, v.$g-1);
-        border: 1px solid v.$color-border-primary;
+        border: 1px solid var(--color-border-primary);
         padding: v.$p-2 v.$p-4;
       }
     }
@@ -2175,7 +2175,7 @@ footer {
 
   main .main__popular-brands {
     &--container {
-      border: 1px solid v.$color-border-primary;
+      border: 1px solid var(--color-border-primary);
       border-radius: v.$radius-md;
       padding: v.$p-6 + 6 0;
 
@@ -2188,7 +2188,7 @@ footer {
       .main__popular-brands--body {
         .main__popular-brands--item {
           border: 0;
-          border-left: 1px solid v.$color-border-primary;
+          border-left: 1px solid var(--color-border-primary);
           border-radius: 0;
           width: 150px;
           flex: 1;
@@ -2280,7 +2280,7 @@ footer {
 
   // footer//////////
   footer {
-    border-top: 1px solid v.$color-border-primary;
+    border-top: 1px solid var(--color-border-primary);
   }
 
   footer .site-footer__mobile {
