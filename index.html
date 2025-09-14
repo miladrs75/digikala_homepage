@@ -48,11 +48,17 @@
                 loading="lazy"
               />
             </a>
-            <input
-              type="text"
-              class="site-header__search-input"
-              placeholder="جستجو"
-            />
+            <div class="site-header__search-wrap">
+              <input
+                type="text"
+                class="site-header__search-input desktop-search-input"
+                placeholder="جستجو"
+              />
+              <div class="site-header__search-wrap--ad-box">
+                <img src="./assets/photos/df87b3f52348f84641e0f453c6b7b61c61207765_1757753350.jpg" alt="search-box-ad">
+                <button class="site-header__search-wrap--close-btn">بستن</button>
+              </div>
+            </div>
           </div>
           <div class="site-header__left">
             <a href="#" class="site-header__btn site-header__btn--theme">
@@ -129,7 +135,8 @@
         ارسال به تمام نقاط کشور
       </div>
     </header>
-    <div class="back-drop"></div>
+    <div class="back-drop menu-backdrop"></div>
+    <div class="back-drop search-backdrop"></div>
     <!-- nav-mobile  -->
     <nav class="site-nav__mobile">
       <ul class="site-nav__mobile-list">
@@ -6661,5 +6668,6 @@
     <script src="./js/carousel.js"></script>
     <script src="./js/categoryMenu.js"></script>
     <script src="./js/theme.js"></script>
+    <script src="./js/searchWrap.js"></script>
   </body>
 </html>
