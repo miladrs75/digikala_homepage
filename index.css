@@ -63,7 +63,7 @@ header .site-header__desktop .site-header__right {
   flex-direction: row;
   gap: 15px;
   flex-grow: 1;
-  max-width: 800px;
+  max-width: 1000px;
 }
 header .site-header__desktop .site-header__right .site-header__logo {
   width: 195px;
@@ -73,6 +73,43 @@ header .site-header__desktop .site-header__right .site-header__logo {
 header .site-header__desktop .site-header__right .site-header__logo img {
   width: 100%;
   height: 100%;
+}
+header .site-header__desktop .site-header__right .site-header__search-wrap {
+  flex-grow: 1;
+  position: relative;
+  background-color: var(--color-bg-primary);
+}
+header .site-header__desktop .site-header__right .site-header__search-wrap .site-header__search-wrap--ad-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  z-index: 1100;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-primary);
+  border-top: none;
+  color: var(--color-text-primary);
+  padding: 18px;
+  border-radius: 0 0 8px 8px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+header .site-header__desktop .site-header__right .site-header__search-wrap .site-header__search-wrap--ad-box img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .site-header__desktop .site-header__right .site-header__search-wrap .site-header__search-wrap--ad-box .site-header__search-wrap--close-btn {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-btn);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
 }
 header .site-header__desktop .site-header__left {
   display: flex;
@@ -92,9 +129,10 @@ header .site-header__search-input {
   border: none;
   outline: none;
   border-radius: 8px;
-  flex-grow: 1;
+  width: 100%;
   background: url("/assets/photos/search_24dp_75797D_FILL0_wght400_GRAD0_opsz24.png") no-repeat right 8px center;
   background-color: var(--color-bg-inp);
+  color: var(--color-text-secondary);
 }
 header .site-header__btn {
   text-decoration: none;
