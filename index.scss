@@ -87,12 +87,18 @@ header {
             color: var(--color-text-primary);
             padding: v.$p-6;
             border-radius: 0 0 v.$radius-md v.$radius-md;
+            pointer-events: none;
             opacity: 0;
             transition: all 0.3s;
 
-            img {
+            a {
               width: 90%;
-              object-fit: cover;
+              text-align: center;
+
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
             }
 
             .site-header__search-wrap--close-btn {
