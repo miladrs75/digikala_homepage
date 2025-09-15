@@ -1180,7 +1180,6 @@ const menuData = [
     ],
   },
 ];
-
 const categoryContainer = document.querySelector(".side-menu__categories");
 const subcategoryContainer = document.querySelector(
   ".side-menu__subcategories"
@@ -1240,6 +1239,9 @@ sideMenuLink.addEventListener("mousemove", () => {
 sideMenu.addEventListener("mouseleave", () => {
   sideMenu.classList.remove("site-nav__desktop--category--side-menu");
   backDrop.style.display = "none";
+  subcategorySections.forEach((s) =>
+    s.classList.add("subcategories-section--inactive")
+  );
 });
 
 backDrop.addEventListener("mouseenter", () => {
@@ -1248,31 +1250,13 @@ backDrop.addEventListener("mouseenter", () => {
 });
 
 categoryItems.forEach((categoryItem, i) => {
-  let timer;
   const subcategory = subcategorySections[i];
 
   categoryItem.addEventListener("mouseenter", () => {
-    clearTimeout(timer);
     subcategorySections.forEach((s) =>
       s.classList.add("subcategories-section--inactive")
     );
     subcategory.classList.remove("subcategories-section--inactive");
-  });
-
-  categoryItem.addEventListener("mouseleave", () => {
-    timer = setTimeout(() => {
-      subcategory.classList.add("subcategories-section--inactive");
-    }, 60000);
-  });
-
-  subcategory.addEventListener("mouseenter", () => {
-    clearTimeout(timer);
-  });
-
-  subcategory.addEventListener("mouseleave", () => {
-    timer = setTimeout(() => {
-      subcategory.classList.add("subcategories-section--inactive");
-    }, 60000);
   });
 });
 
@@ -1280,3 +1264,4 @@ header.addEventListener("mouseenter", () => {
   sideMenu.classList.remove("site-nav__desktop--category--side-menu");
   backDrop.style.display = "none";
 });
+
