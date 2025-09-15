@@ -93,11 +93,16 @@ header .site-header__desktop .site-header__right .site-header__search-wrap .site
   color: var(--color-text-primary);
   padding: 18px;
   border-radius: 0 0 8px 8px;
+  pointer-events: none;
   opacity: 0;
   transition: all 0.3s;
 }
-header .site-header__desktop .site-header__right .site-header__search-wrap .site-header__search-wrap--ad-box img {
+header .site-header__desktop .site-header__right .site-header__search-wrap .site-header__search-wrap--ad-box a {
   width: 90%;
+  text-align: center;
+}
+header .site-header__desktop .site-header__right .site-header__search-wrap .site-header__search-wrap--ad-box a img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
