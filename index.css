@@ -381,6 +381,98 @@ header .site-nav__mobile--location-selector span {
   font-size: 16px;
 }
 
+.search-box__mobile {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  overflow: hidden;
+}
+.search-box__mobile-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  padding: 18px 0;
+  overflow: hidden;
+}
+.search-box__mobile-form--close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  border: none;
+  background-color: var(--color-bg-btn);
+  color: var(--color-text-primary);
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+}
+.search-box__mobile-form--close-btn span {
+  padding: 12px 10px;
+  font-size: 18px;
+}
+.search-box__mobile-form--input {
+  width: 80%;
+  padding: 13px 12px 10px;
+  background-color: var(--color-bg-inp);
+  color: var(--color-text-primary);
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+}
+.search-box__mobile-most-searched {
+  margin: auto;
+  overflow: hidden;
+}
+.search-box__mobile-most-searched h2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  overflow: hidden;
+  margin: 15px;
+}
+.search-box__mobile-most-searched--items {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-right: 15px;
+}
+.search-box__mobile-most-searched--items a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-primary);
+  text-decoration: none;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px 12px 8px 4px;
+  border-radius: 9999px;
+  font-size: 12px;
+}
+.search-box__mobile-most-searched--items a span {
+  font-size: 16px;
+}
+
 .site-nav__mobile {
   position: fixed;
   z-index: 1000;
