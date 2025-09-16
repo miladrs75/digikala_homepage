@@ -370,6 +370,86 @@ header {
   }
 }
 
+.search-box__mobile {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  overflow: hidden;
+
+  &-form {
+    @include m.d-flex(center, center, row, 0);
+    padding: v.$p-6 0;
+    overflow: hidden;
+
+    &--close-btn {
+      @include m.d-flex(center, center, row, 0);
+      border: none;
+      background-color: var(--color-bg-btn);
+      color: var(--color-text-primary);
+      border-radius: 0 v.$radius-md v.$radius-md 0;
+      overflow: hidden;
+
+      span {
+        padding: v.$p-4 v.$p-3;
+        font-size: 18px;
+      }
+    }
+
+    &--input {
+      width: 80%;
+      padding: 13px v.$p-4 v.$p-3;
+      background-color: var(--color-bg-inp);
+      color: var(--color-text-primary);
+      border: none;
+      outline: none;
+      border-radius: v.$radius-md 0 0 v.$radius-md;
+      overflow: hidden;
+    }
+  }
+
+  &-most-searched {
+    margin: auto;
+    overflow: hidden;
+
+    h2 {
+      @include m.d-flex(start, center, row, v.$g-1);
+      color: var(--color-text-primary);
+      font-size: v.$fs-sm;
+      overflow: hidden;
+      margin: 15px
+    }
+
+    &--items {
+      @include m.d-flex(start, center, row, v.$g-4);
+      white-space: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-right: 15px;
+
+      a {
+        @include m.d-flex(start, center, row, 0);
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        border: 1px solid var(--color-border-primary);
+        text-decoration: none;
+        width: max-content;
+        padding: 8px 12px 8px 4px;
+        border-radius: 9999px;
+        font-size: v.$fs-xs;
+
+        span {
+          font-size: v.$fs-md;
+        }
+      }
+    }
+  }
+}
+
 // nav-mobile//////////
 .site-nav__mobile {
   position: fixed;
