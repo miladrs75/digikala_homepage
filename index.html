@@ -28,7 +28,7 @@
         <div class="site-header__mobile">
           <input
             type="text"
-            class="site-header__search-input"
+            class="site-header__search-input mobile-search-input"
             placeholder="جستجو"
           />
           <a href="#" class="site-header__btn site-header__btn--notif">
@@ -56,9 +56,14 @@
               />
               <div class="site-header__search-wrap--ad-box">
                 <a href="#">
-                  <img src="./assets/photos/df87b3f52348f84641e0f453c6b7b61c61207765_1757753350.jpg" alt="search-box-ad">
+                  <img
+                    src="./assets/photos/df87b3f52348f84641e0f453c6b7b61c61207765_1757753350.jpg"
+                    alt="search-box-ad"
+                  />
                 </a>
-                <button class="site-header__search-wrap--close-btn">بستن</button>
+                <button class="site-header__search-wrap--close-btn">
+                  بستن
+                </button>
               </div>
             </div>
           </div>
@@ -137,6 +142,42 @@
         ارسال به تمام نقاط کشور
       </div>
     </header>
+    <div class="search-box__mobile">
+      <div class="search-box__mobile-form">
+        <button class="search-box__mobile-form--close-btn">
+          <span class="material-symbols-outlined"> arrow_forward </span>
+        </button>
+        <input type="text" class="search-box__mobile-form--input" />
+      </div>
+      <div class="search-box__mobile-most-searched">
+        <h2>
+          <span class="material-symbols-outlined"> local_fire_department </span>
+          جستجوهای پرطرفدار
+        </h2>
+        <div class="search-box__mobile-most-searched--items">
+          <a href="#">
+            تراول ماگ
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </a>
+          <a href="#">
+            مداد نوکی
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </a>
+          <a href="#">
+            هارد اکسترنال
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </a>
+          <a href="#">
+            آیفون ۱۶
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </a>
+          <a href="#">
+            قاب گوشی
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="back-drop menu-backdrop"></div>
     <div class="back-drop search-backdrop"></div>
     <!-- nav-mobile  -->
@@ -6668,8 +6709,9 @@
       </div>
     </footer>
     <script src="./js/carousel.js"></script>
-    <script src="./js/categoryMenu.js"></script>
+    <script type="module" src="./js/categoryMenu.js"></script>
     <script src="./js/theme.js"></script>
     <script src="./js/searchWrap.js"></script>
+    <script src="./js/mobileSearch.js"></script>
   </body>
 </html>
